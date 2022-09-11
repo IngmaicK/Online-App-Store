@@ -2,6 +2,9 @@ import { Carousel } from "react-bootstrap";
 import { LinkContainer } from "react-router-bootstrap";
 
 const ProductCarouselComponent = () => {
+    const cursorP = {
+        cursor: "pointer"
+    }
     return (
         <Carousel>
             <Carousel.Item>
@@ -13,7 +16,7 @@ const ProductCarouselComponent = () => {
                     alt="First slide"
                 />
                 <Carousel.Caption>
-                    <LinkContainer to="product-details">
+                    <LinkContainer style={cursorP} to="product-details">
                         <h3>Bestseller in Laptops category</h3>
                     </LinkContainer>                    
                     <p>Dell Inspiron 15 3000 Laptop, 15.6 inch HD</p>
@@ -28,8 +31,10 @@ const ProductCarouselComponent = () => {
                 />
 
                 <Carousel.Caption>
-                    <h3>Second slide label</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <LinkContainer style={cursorP} to="product-details">
+                        <h3>Bestseller in Books category</h3>
+                    </LinkContainer>  
+                    <p>World of Erik Carle, Hear Bear Roar 30-Button Animal Sound Book</p>
                 </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
@@ -41,9 +46,12 @@ const ProductCarouselComponent = () => {
                 />
 
                 <Carousel.Caption>
-                    <h3>Third slide label</h3>
+                <LinkContainer style={cursorP} to="product-details">
+                        <h3>Bestseller in Cameras category</h3>
+                    </LinkContainer>  
                     <p>
-                        Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                        4K Camcorder ideo Camera 60 FPS 48 MP Vlogging Camera for Youtube
+                        WiFi 16X Digital Camera
                     </p>
                 </Carousel.Caption>
             </Carousel.Item>
