@@ -80,7 +80,7 @@ function App() {
           />
           <Route path="/admin/edit-product" element={<AdminEditProductPage />} />
           <Route
-            path="/admin/create"
+            path="/admin/create-new-product"
             element={<AdminCreateProductPage />}
           />
           <Route path="/admin/chats" element={<AdminChatsPage />} />
