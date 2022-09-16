@@ -2,24 +2,36 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-app.use((req, res, next) => {
-    console.log("first middleware");
-    next()
+const apiRoutes = require("./routes/apiRoutes")
+
+app.get('/', (req, res) => {
+    console.log("synchronous code")
+    throw new Error("some error occured")
+    res.json({message: "API running..."})
 })
 
-app.get('/', (req, res, next) => {
-    console.log("second middleware");
-  res.send('Hello World!')
-//   next()
+app.get('/a', (req,res,next) => {
+    setTimeout(() => {
+        try {
+            aconsole.log("asynchronouse code");
+        } catch (er) {
+            next(er);
+        }
+    },1000)
+    // next(new Error("some error occured"));
 })
 
-app.get('/two', (req, res) => {
-    console.log("third middleware");
-  res.send('Hello World 2!')
-})
+app.use('/api', apiRoutes)
 
-app.use((req,res) => {
-    console.log("fourth middleware");
+app.use((error, req, res, next) => {
+    console.error(error);
+    next(error)
+})
+app.use((error, req, res, next) => {
+    res.status(500).json({
+        message: error.message,
+        stack: error.stack
+    })
 })
 
 app.listen(port, () => {
