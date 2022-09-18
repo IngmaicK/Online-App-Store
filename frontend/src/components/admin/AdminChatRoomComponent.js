@@ -10,17 +10,17 @@ const AdminChatRoomComponent = () => {
     <>
       <Toast show={toast1} onClose={close1} className="ms-4 mb-5">
         <Toast.Header>
-          <strong className="me-auto">Chat with Miguel RA</strong>
+          <strong className="me-auto">Chat with John Doe</strong>
         </Toast.Header>
         <Toast.Body>
           <div style={{ maxHeight: "500px", overflow: "auto" }}>
             {Array.from({ length: 30 }).map((_, idx) => (
               <Fragment key={idx}>
                 <p className="bg-primary p-3 ms-4 text-light rounded-pill">
-                  <b>User wrote:</b> Hello! This is a chat message.
+                  <b>User wrote:</b> Hello, world! This is a chat message.
                 </p>
                 <p>
-                  <b>Admin wrote:</b> Hello! This is a chat message.
+                  <b>Admin wrote:</b> Hello, world! This is a chat message.
                 </p>
               </Fragment>
             ))}
@@ -43,7 +43,7 @@ const AdminChatRoomComponent = () => {
       </Toast>
       <Toast show={toast2} onClose={close2} className="ms-4 mb-5">
         <Toast.Header>
-          <strong className="me-auto">Chat with MaicK RA</strong>
+          <strong className="me-auto">Chat with John Doe2</strong>
         </Toast.Header>
         <Toast.Body>
           <div style={{ maxHeight: "500px", overflow: "auto" }}>
