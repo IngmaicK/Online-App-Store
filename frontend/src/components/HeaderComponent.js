@@ -56,6 +56,9 @@ const HeaderComponent = () => {
                         <LinkContainer to="/login">
                             <Nav.Link>Login</Nav.Link>
                         </LinkContainer>
+                        <LinkContainer to="/register">
+                            <Nav.Link>Register</Nav.Link>
+                        </LinkContainer>
                         <LinkContainer to="/cart">
                             <Nav.Link>
                                 <Badge pill bg="danger">
@@ -64,9 +67,6 @@ const HeaderComponent = () => {
                                 <i className="bi bi-cart-dash"></i>
                                 <span className="ms-1">CART</span>
                             </Nav.Link>
-                        </LinkContainer>
-                        <LinkContainer to="/register">
-                            <Nav.Link>register</Nav.Link>
                         </LinkContainer>
                     </Nav>
 
