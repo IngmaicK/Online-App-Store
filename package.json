@@ -1,7 +1,7 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "my Project",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,7 +10,7 @@
     "client": "npm start --prefix ../frontend",
     "dev": "concurrently --kill-others-on-fail \"npm run server-dev\" \"npm run client\"",
     "seed:data": "node seeder/seeder",
-    "seed:data-d": "node seeder/seeder -d"
+    "seed:data-d": "node seeder/seeder -d",
     "heroku-postbuild": "npm install --prefix frontend && npm run build --prefix frontend"
   },
   "author": "",
